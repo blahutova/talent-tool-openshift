@@ -26,13 +26,13 @@ gem 'puma', '~> 3.7'
 gem 'rack-cors'
 gem 'jwt'
 gem 'listen', '>= 3.0.5', '< 3.2'
+gem 'foreman', '~> 0.85.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pg'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.5'
-  gem 'foreman', '~> 0.85.0'
 end
 
 group :test do
