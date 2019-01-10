@@ -15,3 +15,15 @@ default: &default
   host: <%= ENV["#{db_service}_SERVICE_HOST"] %>
   port: <%= ENV["#{db_service}_SERVICE_PORT"] %>
   database: <%= ENV["POSTGRESQL_DATABASE"] %>
+
+development:
+  <<: *default
+
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
+
+production:
+  <<: *default
